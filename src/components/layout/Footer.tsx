@@ -81,6 +81,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('embeddings-3d')} className="hover:text-[#62C9F5] transition-colors">
+                  &rarr; 3D Embeddings
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('learn')} className="hover:text-[#62C9F5] transition-colors">
                   &rarr; Learning Corner
                 </button>

@@ -14,7 +14,9 @@ export default defineConfig({
       output: {
         manualChunks: {
           'gpt-tokenizer': ['gpt-tokenizer'],
-          'vendor': ['react', 'react-dom', 'lucide-react', 'framer-motion']
+          'vendor': ['react', 'react-dom', 'lucide-react', 'framer-motion'],
+          'three': ['three'],
+          'transformers': ['@xenova/transformers']
         }
       }
     }

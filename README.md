@@ -69,7 +69,39 @@ The project identity incorporates a subtle, futuristic **Beyblade-inspired desig
 - **In-Context Occurrence Highlighter**: Clicking any token highlights all of its positions directly within the source text.
 - **Recurring Pattern Detector**: Automatically identifies repeated bigrams / n-grams in the token stream.
 
-### 6. Learning Corner
+### 6. 3D Embedding Explorer
+- **Hardware-Accelerated Three.js 3D Scatter Plot**:
+  - Three axes: **PC1**, **PC2**, and **PC3** with grid planes, tick marks, and variance metrics.
+  - **Sample Sentences**: Rendered as glowing circular points (spheres).
+  - **User-Added Sentences**: Rendered as distinct glowing diamond points (octahedrons).
+  - Dark visualization panel adhering to the Midnight Navy theme with subtle arena bounding cage.
+  - Interactive Legend explaining both categories.
+- **Dimensionality Reduction Pipeline**:
+  - Dual PCA (Principal Component Analysis) projecting high-dimensional vectors to 3D.
+  - Displays Explained Variance for PC1, PC2, and PC3 (typically 80%+ of total variance).
+  - Multi-engine toggle: Dense Semantic Centroids (64-D), Pretrained Transformers.js MiniLM (384-D), and Lexical TF-IDF (64-D).
+- **Interactive Controls**:
+  - Drag to orbit/rotate in 3D.
+  - Scroll or dedicated zoom buttons (+ / -).
+  - Reset camera view button.
+  - Rotate left / Rotate right buttons.
+  - Auto-spin toggle for cinematic arena rotation.
+  - Hover tooltip displaying sentence text, category, and 3D coordinates.
+  - Floating 3D billboard labels toggle.
+- **"TRY A WORD OR SENTENCE" Input**:
+  - Add arbitrary words or sentences to the plot dynamically.
+  - Instant vectorization and re-projection into the 3D space with diamond markers.
+  - Validation with error handling for empty or duplicate inputs.
+- **"EDIT SAMPLE SENTENCES" Expandable Editor**:
+  - Full CRUD: add, edit inline, remove, or reset default baseline sentences.
+- **High-Dimensional Cosine Similarity Comparator**:
+  - Select any two points (via canvas click or dropdown selectors).
+  - Calculates true Cosine Similarity $\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\|_2 \|\mathbf{v}\|_2}$ directly on the raw high-dimensional vectors (NOT on 3D coordinates).
+  - Beginner-friendly educational breakdown of semantic clustering.
+- **Educational PCA Explainer Panel**:
+  - Modal breakdown detailing the math of mean centering, covariance, and orthogonal eigenvectors.
+
+### 7. Learning Corner
 - 7 comprehensive educational modules:
   1. *What is Tokenization?*
   2. *Why Do LLMs Use Tokens Instead of Characters or Words?*
@@ -102,6 +134,8 @@ The project identity incorporates a subtle, futuristic **Beyblade-inspired desig
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 - **Motion & Animations**: Framer Motion & CSS Canvas
+- **3D Visualization**: Three.js (WebGL Hardware-Accelerated 3D Scatter Plot)
+- **Neural & Semantic Embeddings**: `@xenova/transformers` (`Xenova/all-MiniLM-L6-v2`) & Semantic Centroid Engine
 - **Pretrained Tokenization**: `gpt-tokenizer` (`cl100k_base` and `o200k_base`)
 - **Audio Feedback**: Web Audio API (subtle synthetic futuristic sound effects)
 

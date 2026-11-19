@@ -6,6 +6,7 @@ import { TokenBreakdownTable } from './components/breakdown/TokenBreakdownTable'
 import { BpeLabSection } from './components/bpeLab/BpeLabSection';
 import { TokenBattleSection } from './components/battle/TokenBattleSection';
 import { TokenExplorerSection } from './components/explorer/TokenExplorerSection';
+import { EmbeddingExplorerSection } from './components/embeddings/EmbeddingExplorerSection';
 import { LearningCornerSection } from './components/learn/LearningCornerSection';
 import { Footer } from './components/layout/Footer';
 import { defaultBpeEngine } from './engine/bpeEngine';
@@ -41,7 +42,7 @@ export function App() {
 
   // IntersectionObserver to track active section while scrolling
   useEffect(() => {
-    const sectionIds = ['hero', 'tokenizer', 'vocabulary-lab', 'token-battle', 'token-explorer', 'learn'];
+    const sectionIds = ['hero', 'tokenizer', 'vocabulary-lab', 'token-battle', 'token-explorer', 'embeddings-3d', 'learn'];
     const handleScroll = () => {
       const scrollY = window.scrollY + 200;
       for (let i = sectionIds.length - 1; i >= 0; i--) {
@@ -103,6 +104,9 @@ export function App() {
           onSelectToken={setSelectedToken}
           selectedToken={selectedToken}
         />
+
+        {/* 3D Embedding Explorer */}
+        <EmbeddingExplorerSection />
 
         {/* Learning Corner */}
         <LearningCornerSection />

@@ -33,6 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
     { id: 'vocabulary-lab', label: 'Vocabulary Lab' },
     { id: 'token-battle', label: 'Token Battle' },
     { id: 'token-explorer', label: 'Token Explorer' },
+    { id: 'embeddings-3d', label: '3D Embeddings' },
     { id: 'learn', label: 'Learn' },
   ];
 
