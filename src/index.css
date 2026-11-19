@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #080F1E;
+  color: #F1F5FC;
+  overflow-x: hidden;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080F1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B2B48;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #398BFF;
+}
+
+/* Glassmorphism panel */
+.lab-glass {
+  background: rgba(17, 28, 48, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(57, 139, 255, 0.15);
+}
+
+.lab-glass-card {
+  background: rgba(20, 33, 55, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.lab-glass-card:hover {
+  border-color: rgba(57, 139, 255, 0.35);
+}
+
+/* Arena Concentric Rings SVG/CSS */
+.arena-ring-dashed {
+  stroke-dasharray: 6 8;
+  animation: spin 60s linear infinite;
+  transform-origin: center;
+}
+
+.arena-ring-reverse {
+  stroke-dasharray: 4 6;
+  animation: spin-reverse 45s linear infinite;
+  transform-origin: center;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 25px -5px rgba(57, 139, 255, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px -5px rgba(98, 201, 245, 0.25);
+}
+
+.glow-text {
+  text-shadow: 0 0 16px rgba(57, 139, 255, 0.5);
+}
